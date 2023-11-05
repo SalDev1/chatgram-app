@@ -20,7 +20,8 @@ import { io } from "socket.io-client";
 import Lottie from "lottie-react";
 import TypingAnimation from "../animations/typing.json";
 
-const ENDPOINT = "http://localhost:8080";
+// const ENDPOINT = "http://localhost:8080";
+const ENDPOINT = "https://chatgram-o5lh.onrender.com";
 var socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {

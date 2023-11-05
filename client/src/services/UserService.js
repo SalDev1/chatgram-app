@@ -7,7 +7,8 @@ const config = {
   },
 };
 
-const API_URL = "http://localhost:8080/api";
+// const API_URL = "http://localhost:8080/api";
+const API_URL = "https://chatgram-o5lh.onrender.com/api";
 
 export const createUser = async (user) => {
   const url = API_URL + "/user";
