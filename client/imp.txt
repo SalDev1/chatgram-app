@@ -34,3 +34,7 @@ and we download socket io in the root of the folder.
 MONGO_URL = mongodb+srv://salman:salman11@cluster0.olbemel.mongodb.net/
 PORT = 8080
 JWT_SECRET = salman
+NDOE_ENV = production.
+
+
+Deploying the app on render.

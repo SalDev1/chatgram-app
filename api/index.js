@@ -27,13 +27,32 @@ connectDB();
 app.use(express.json());
 app.use(cors());
 
-app.get("/", (req, res) => {
-  res.send("API is running successfully.");
-});
+// app.get("/", (req, res) => {
+//   res.send("API is running successfully.");
+// });
 
 app.use("/api/user", userRoutes);
 app.use("/api/chat", chatRoutes);
 app.use("/api/message", messageRoutes);
+
+//------------PRODUCTION DEPLOYMENT CODE --------------------
+
+// __dirname1 --> signifies the current working directory.
+const __dirname1 = path.resolve();
+
+if (process.env.NODE_ENV === "production") {
+  // Establishing a path from current working directory to the build folder of the frontend.
+  app.use(express.static(path.join(__dirname1, "client/build")));
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname1, "client", "build", "index.html"));
+  });
+} else {
+  app.get("/", (req, res) => {
+    res.send("API is running successfully");
+  });
+}
+//------------PRODUCTION DEPLOYMENT CODE --------------------
 
 app.use(notFound);
 app.use(errorHandler);
