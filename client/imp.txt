@@ -38,3 +38,6 @@ NDOE_ENV = production.
 
 
 Deploying the app on render.
+
+Go to the render 
+For MERN Stack --> Select Web Service
