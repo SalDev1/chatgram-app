@@ -1,0 +1,36 @@
+How to use cloudinary, 
+
+After login , go to settings and create a new app for it by going
+to app upload present.
+
+CLOUDINARY URL (Get it from the docs : "https://cloudinary.com/documentation/image_upload_api_reference")
+
+
+Socket.io is a solution for many real-time chat systems , basically 
+providing a bidirectional solution between two users.
+
+Use the documentation --> https://socket.io/
+
+We will building a connection between the client and api 
+and we download socket io in the root of the folder.
+
+1] Install the client version of socket.io.
+2] Install the server version of socket.io.
+
+// socket.on --> receiving data.
+// socket.emit --> sending data.
+
+  // If the friend sends me a message , it display the messages
+      // in the chat room we have created between me and my friend.
+      // if (
+      //   !selectedChatCompare ||
+      //   selectedChatCompare._id !== newMessageReceived.chatData._id
+      // ) {
+      //   // New Notification Received.
+      // } else {
+      //   setMessages([...messages, newMessageReceived.chatData]);
+      // }
+
+MONGO_URL = mongodb+srv://salman:salman11@cluster0.olbemel.mongodb.net/
+PORT = 8080
+JWT_SECRET = salman
